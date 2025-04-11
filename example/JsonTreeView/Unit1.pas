@@ -4,13 +4,13 @@ interface
 
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
-  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.ComCtrls, json.treeviewer, Vcl.Menus,
-  json.treeviewer;
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.ComCtrls, json.treeviewer, Vcl.Menus;
 
 type
   TForm1 = class(TForm)
     PopupMenu1: TPopupMenu;
     paste1: TMenuItem;
+    JSONTreeView1: TJSONTreeView;
     procedure FormKeyDown(Sender: TObject; var Key: Word; Shift: TShiftState);
     procedure paste1Click(Sender: TObject);
   private

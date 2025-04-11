@@ -30,13 +30,13 @@ package dclJSONrtl;
 {$IMPLICITBUILD ON}
 
 requires
+  vcl,
   rtl,
-  vcl
-  ,dmvcframeworkRT120;
+  dmvcframeworkRT;
 
 contains
-  JSON.TreeViewer in 'JSON.TreeViewer.pas',
-  JsonDataObjects in 'JsonDataObjects.pas';
+  JSON.TreeViewer in 'JSON.TreeViewer.pas';
 
 end.
+
 

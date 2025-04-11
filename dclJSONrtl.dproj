@@ -117,11 +117,10 @@
         <DelphiCompile Include="$(MainSource)">
             <MainSource>MainSource</MainSource>
         </DelphiCompile>
-        <DCCReference Include="rtl.dcp"/>
         <DCCReference Include="vcl.dcp"/>
-        <DCCReference Include="dmvcframeworkRT120.dcp"/>
+        <DCCReference Include="rtl.dcp"/>
+        <DCCReference Include="dmvcframeworkRT.dcp"/>
         <DCCReference Include="JSON.TreeViewer.pas"/>
-        <DCCReference Include="JsonDataObjects.pas"/>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
         </BuildConfiguration>

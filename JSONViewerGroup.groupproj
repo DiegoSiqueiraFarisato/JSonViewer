@@ -1,0 +1,60 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{71A3CE9F-B79F-4B05-8797-3683C3A3B4B7}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="dclJSONrtl.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="dclJSONdesign.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="example\JsonTreeView\TreeViewerJson.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="dclJSONrtl">
+        <MSBuild Projects="dclJSONrtl.dproj"/>
+    </Target>
+    <Target Name="dclJSONrtl:Clean">
+        <MSBuild Projects="dclJSONrtl.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="dclJSONrtl:Make">
+        <MSBuild Projects="dclJSONrtl.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="dclJSONdesign">
+        <MSBuild Projects="dclJSONdesign.dproj"/>
+    </Target>
+    <Target Name="dclJSONdesign:Clean">
+        <MSBuild Projects="dclJSONdesign.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="dclJSONdesign:Make">
+        <MSBuild Projects="dclJSONdesign.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="TreeViewerJson">
+        <MSBuild Projects="example\JsonTreeView\TreeViewerJson.dproj"/>
+    </Target>
+    <Target Name="TreeViewerJson:Clean">
+        <MSBuild Projects="example\JsonTreeView\TreeViewerJson.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="TreeViewerJson:Make">
+        <MSBuild Projects="example\JsonTreeView\TreeViewerJson.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="dclJSONrtl;dclJSONdesign;TreeViewerJson"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="dclJSONrtl:Clean;dclJSONdesign:Clean;TreeViewerJson:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="dclJSONrtl:Make;dclJSONdesign:Make;TreeViewerJson:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>
